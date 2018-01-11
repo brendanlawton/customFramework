@@ -21,6 +21,7 @@ class Router
             return $this->routes[$uri];
         }
 
-        throw new OutOfBoundsException('No route was found for this URI');
+        return '404.php';
+//        throw new OutOfBoundsException('No route was found for this URI');
     }
 }
