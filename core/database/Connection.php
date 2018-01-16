@@ -2,6 +2,11 @@
 
 class Connection
 {
+    /**
+     * Attempt to make and return a db connection
+     * @param $config
+     * @return PDO
+     */
     public static function make($config)
     {
         try {

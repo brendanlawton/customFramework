@@ -8,6 +8,7 @@ class Router
     ];
 
     /**
+     * Load a file on the server
      * @param $file
      * @return static
      */
@@ -37,9 +38,10 @@ class Router
     }
 
     /**
+     * Attempt to direct the user
      * @param string $uri
+     * @param $requestType
      * @return mixed
-     * @throws Exception
      */
     public function direct($uri, $requestType)
     {
