@@ -1,6 +1,6 @@
 <?php
 
-$app['database']->insert('names', [
+App::get('database')->insert('names', [
     'personName' => htmlspecialchars($_POST['name'])
 ]);
 
