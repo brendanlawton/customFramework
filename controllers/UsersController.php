@@ -1,11 +1,15 @@
 <?php
 
+namespace App\Controllers;
+
+use App\Core\App;
+
 class UsersController
 {
     /**
      * Standard view point for users
      * @return mixed
-     * @throws Exception
+     * @throws \App\Core\Exception
      */
     public function index()
     {
@@ -14,6 +18,10 @@ class UsersController
         return view('users', ['users' => $users]);
     }
 
+    /**
+     * Add a user to the database
+     * @throws \App\Core\Exception
+     */
     public function store()
     {
         App::get('database')->insert('names', [
